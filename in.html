@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VOICE BASED EMAIL</title>
+	<h1>VOICE BASED EMAIL</h1>
+</head>
+<body  bgcolor="grey" background="C:\Users\neeth\OneDrive\Desktop\images.jpg" style="background-repeat:no-repeat;background-size:100%">
+    <!-- Input area -->
+
+	<!--<img src="C:\img\download.jpg" height=100%>-->
+
+    <label for="MAILID">MAILID</label>
+    <input type="text" name="" id="MAILID" placeholder="Speak Something" onclick="record()">
+
+    <!-- Below is the script for voice recognition and conversion to text-->
+    <script>
+        function record() {
+            var recognition = new webkitSpeechRecognition();
+            recognition1.lang = "en-GB";
+
+            recognition1.onresult = function(event) {
+                console.log(event);
+                document.getElementById('speechToText').value = event.results[0][0].transcript;
+            }
+            recognition1.start();
+
+        }
+    </script>
+	  <label for="PASSWORD">PASSWORD</label>
+    <input type="text" name="" id="PASSWORD" placeholder="Speak Something" onclick="record()"></h1>
+    <!-- Below is the script for voice recognition and conversion to text-->
+    <script>
+        function record() {
+            var recognition2 = new webkitSpeechRecognition();
+            recognition2.lang = "en-GB";
+
+            recognition2.onresult = function(event) {
+                console.log(event);
+                document.getElementById('speechToText').value = event.results[0][0].transcript;
+            }
+            recognition2.start();
+
+        }
+    </script>
+	<br>
+   <br><a href="PAGE3.HTML">
+    <button>    LOGIN   </button></a>
+	Have no account?<a href="PAGE1.HTML">sign up</a>
+	
+    <!-- end of script -->
+</body>
+</html>
+
+
+
